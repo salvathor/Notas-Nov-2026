@@ -84,6 +84,16 @@ Ejemplo de reproducción multimedia y manejo de eventos táctiles con SwiftUI.
 - Gestos Tap, Long Press, Drag, Magnification y Rotation.
 - `TabView`.
 
+### 1.6. Swift Data
+
+**Repositorio:** [Ejemplo Swift Data](https://github.com/salvathor/ejemplo_SwiftData)
+
+Ejemplo de Lista de Tareas con Swift Data.
+
+**Conceptos:**
+- Swift Data
+- Persistencia de datos
+
 ---
 
 ## 2. Notas
