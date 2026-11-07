@@ -89,10 +89,13 @@ Ejemplo de reproducción multimedia y manejo de eventos táctiles con SwiftUI.
 **Repositorio:** [Ejemplo Swift Data](https://github.com/salvathor/ejemplo_SwiftData)
 
 Ejemplo de Lista de Tareas con Swift Data.
+Ejemplo básico del uso de Combine
 
 **Conceptos:**
 - Swift Data
 - Persistencia de datos
+- Combine
+- Programación Reactiva
 
 ---
 
