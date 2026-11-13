@@ -149,6 +149,23 @@ Proyecto didáctico con seis pruebas unitarias y una prueba de interfaz escritas
 - Ejecución e interpretación de resultados en Xcode (⌘U y navegador de pruebas).
 - Ejercicios propuestos: división entre cero, búsqueda sin coincidencia y precios decimales.
 
+### 1.10. Contador con MVVM
+
+**Repositorio:** [Contador-MVVM](https://github.com/salvathor/Contador-MVVM)
+
+Aplicación de ejemplo con SwiftUI que muestra un contador que inicia en cero y un botón **Incrementar**. Sirve para entender cómo separar el modelo de dominio, la vista y la coordinación del estado.
+
+**Conceptos:**
+- MVVM (Model–View–ViewModel).
+- Modelo inmutable (`Contador`) cuyo método `incrementar()` devuelve una nueva instancia.
+- Lógica de dominio independiente de SwiftUI, por lo que puede probarse sin interfaz.
+- `ObservableObject` y `@Published` (Combine).
+- `private(set)` para limitar quién puede modificar el estado.
+- `@MainActor` en el ViewModel.
+- `@StateObject` para conservar el ViewModel en la vista.
+- Flujo de una interacción: vista → ViewModel → modelo → `@Published` → actualización de la vista.
+- Punto de entrada con `@main` y bloques `#Preview` y `#Playground`.
+
 ---
 
 ## 2. Notas
