@@ -1,4 +1,3 @@
-
 # Material de apoyo — Desarrollo de aplicaciones móviles
 
 ## 1. Ejemplos de apoyo
@@ -96,6 +95,59 @@ Ejemplo básico del uso de Combine
 - Persistencia de datos
 - Combine
 - Programación Reactiva
+
+### 1.7. Módulos SwiftUI con MVVM
+
+**Repositorio:** [ModulosSwiftUI](https://github.com/salvathor/ModulosSwiftUI)
+
+Aplicación de ejemplo que muestra cómo organizar una app por funcionalidades con MVVM, inyección de dependencias y fábricas de vistas. Permite consultar usuarios, revisar sus datos, ver su ubicación en un mapa, obtener la posición del dispositivo y calcular una ruta en automóvil hacia el usuario seleccionado.
+
+**Conceptos:**
+- MVVM (Model–View–ViewModel).
+- Inyección de dependencias mediante un contenedor (`DIContainer`).
+- Fábricas de vistas (`Factory`) por módulo.
+- Repositorios y protocolos con implementación de datos en memoria.
+- `ObservableObject`, `@Published` y `@StateObject`.
+- `NavigationStack` y flujo Usuarios → Detalle → Ubicación.
+- Core Location: permisos, `CLLocationManager` y callbacks del delegado.
+- MapKit: mapas, marcadores, rutas y tiempo estimado.
+- `async/await` para el cálculo de rutas.
+- Kingfisher (`KFImage`) para imágenes remotas.
+- Pruebas unitarias con Swift Testing y pruebas de interfaz.
+
+### 1.8. VIPER con SwiftUI
+
+**Repositorio:** [VIPER-SwiftUI](https://github.com/salvathor/VIPER-SwiftUI)
+
+Ejemplo de cómo implementar la arquitectura VIPER en una app SwiftUI. La app carga de forma asíncrona una lista de productos y permite abrir una vista de detalle para cada uno.
+
+**Conceptos:**
+- Arquitectura VIPER: View, Interactor, Presenter, Entity y Router.
+- View (`ProductListView`, `ProductDetailView`): muestra el estado y envía eventos al Presenter, sin lógica de negocio.
+- Interactor (`ProductInteractorProtocol`, `ProductInteractor`): lógica de negocio y acceso a datos, sin conocer la interfaz.
+- Presenter (`ProductListPresenter`): solicita datos al Interactor y publica el estado que dibuja la View.
+- Entity (`Product`): modelo de datos.
+- Router (`ProductRouter`): ensambla módulos mediante inyección de dependencias y gestiona la navegación.
+- Inyección de dependencias por protocolos, para usar un Interactor simulado en pruebas.
+- `@MainActor` en el Presenter y `@StateObject` en la View.
+- `async/await` y `NavigationStack` con `navigationDestination`.
+
+### 1.9. Aprender pruebas con XCTest
+
+**Repositorio:** [Pruebas](https://github.com/salvathor/Pruebas)
+
+Proyecto didáctico con seis pruebas unitarias y una prueba de interfaz escritas con XCTest. La app muestra formularios de acceso, registro y recuperación, todos de demostración, sin autenticación real ni conexión a un servidor.
+
+**Conceptos:**
+- Diferencia entre pruebas unitarias y pruebas de interfaz (UI).
+- XCTest, `XCTestCase` y `XCTAssert…`.
+- Patrón Arrange, Act y Assert (AAA) y el objeto bajo prueba (`sut`).
+- Ciclo de vida de una prueba: `setUpWithError` y `tearDownWithError`.
+- Aserciones: `XCTAssertEqual`, `XCTAssertTrue`, `XCTAssertNotNil` y `XCTUnwrap`.
+- Manejo de opcionales en pruebas.
+- `XCUIApplication`, `waitForExistence`, `isHittable` y `continueAfterFailure`.
+- Ejecución e interpretación de resultados en Xcode (⌘U y navegador de pruebas).
+- Ejercicios propuestos: división entre cero, búsqueda sin coincidencia y precios decimales.
 
 ---
 
